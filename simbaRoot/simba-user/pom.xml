@@ -83,6 +83,10 @@
 			<groupId>com.simba</groupId>
 			<artifactId>simba-wechatPay</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.simba</groupId>
+			<artifactId>simba-mongodb</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>

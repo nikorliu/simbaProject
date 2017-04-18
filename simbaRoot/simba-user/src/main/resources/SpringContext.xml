@@ -19,7 +19,7 @@
 	</bean>
 	<import resource="classpath:/SpringBeans.xml" />
 	<import resource="classpath:/SpringFramework.xml" />
-	<!-- 
+	<!--  -->
 	<import resource="classpath:/SpringMongo.xml" />
-	 -->
+	
 </beans>

@@ -7,11 +7,10 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 public class MongoDB {
 
 	@Autowired
@@ -28,11 +27,11 @@ public class MongoDB {
 	 * @return
 	 */
 	public Query buildQuery(Map<String, Object> params) {
-//		Criteria c = null;
-//		params.forEach((key,value)->{
-//			c = 
-//		});
-//		Criteria.where("id").is(o);
+		// Criteria c = null;
+		// params.forEach((key,value)->{
+		// c =
+		// });
+		// Criteria.where("id").is(o);
 		return null;
 	}
 
@@ -44,6 +43,7 @@ public class MongoDB {
 		mongoTemplate.save(m);
 		m.setAge(520);
 		m.setName("yours");
+		m.setId(100);
 		mongoTemplate.insert(m);
 		List<M> l = mongoTemplate.findAll(M.class);
 		System.out.println("***************" + l.toString() + "***********");
