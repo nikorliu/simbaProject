@@ -1,12 +1,10 @@
 package com.simba.util;
 
-import java.util.List;
 import java.util.Map;
-
-import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Component;
 
@@ -21,31 +19,29 @@ public class MongoDB {
 	}
 
 	/**
+	 * 构造分页查询的对象
+	 * 
+	 * @param query
+	 * @param start
+	 * @param limit
+	 * @return
+	 */
+	public Query page(Query query, int start, int limit) {
+		return query.skip(start).limit(limit);
+	}
+
+	/**
 	 * 构造查询对象
 	 * 
 	 * @param params
 	 * @return
 	 */
 	public Query buildQuery(Map<String, Object> params) {
-		// Criteria c = null;
-		// params.forEach((key,value)->{
-		// c =
-		// });
-		// Criteria.where("id").is(o);
-		return null;
+		Criteria c = new Criteria();
+		for (Map.Entry<String, Object> entry : params.entrySet()) {
+			c.and(entry.getKey()).is(entry.getValue());
+		}
+		return new Query(c);
 	}
 
-	@PostConstruct
-	private void init() {
-		M m = new M();
-		m.setAge(12);
-		m.setName("我的");
-		mongoTemplate.save(m);
-		m.setAge(520);
-		m.setName("yours");
-		m.setId(100);
-		mongoTemplate.insert(m);
-		List<M> l = mongoTemplate.findAll(M.class);
-		System.out.println("***************" + l.toString() + "***********");
-	}
 }
