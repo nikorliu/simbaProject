@@ -9,7 +9,7 @@
     </appender>
 
     <appender name="PROJECT" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="${loggingRoot}/user.log" />
+        <param name="File" value="/home/logs/user.log" />
         <param name="Append" value="true" />
         <param name="Encoding" value="UTF-8" />
         <layout class="org.apache.log4j.PatternLayout">

@@ -13,7 +13,7 @@
 	<bean class="com.simba.common.CustomizedPropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
-				<value>classpath:/configs.properties</value>
+				<value>classpath:#{T(com.simba.common.ConfigFile).getFileName()}</value>
 			</list>
 		</property>
 	</bean>

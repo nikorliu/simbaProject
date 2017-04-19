@@ -20,8 +20,6 @@ public class CustomizedPropertyPlaceholderConfigurer extends PropertyPlaceholder
 
 	private static Map<String, String> ctxPropertiesMap;
 
-	private static final String defaultConfigPropertiesFile = "/configs.properties";
-
 	@Override
 	protected void processProperties(ConfigurableListableBeanFactory beanFactoryToProcess, Properties props) throws BeansException {
 		super.processProperties(beanFactoryToProcess, props);
@@ -35,7 +33,7 @@ public class CustomizedPropertyPlaceholderConfigurer extends PropertyPlaceholder
 
 	public static String getContextProperty(String name) {
 		if (ctxPropertiesMap == null) {
-			ctxPropertiesMap = PropertiesUtil.read(defaultConfigPropertiesFile);
+			ctxPropertiesMap = PropertiesUtil.read(ConfigFile.getFileName());
 		}
 		return ctxPropertiesMap.get(name);
 	}
