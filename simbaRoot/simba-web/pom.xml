@@ -88,6 +88,10 @@
 			<groupId>com.simba</groupId>
 			<artifactId>simba-echarts</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.simba</groupId>
+			<artifactId>simba-actuator</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>

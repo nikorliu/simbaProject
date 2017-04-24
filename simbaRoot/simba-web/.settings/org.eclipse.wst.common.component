@@ -70,6 +70,9 @@
         <dependent-module archiveName="simba-echarts-1.0.0-RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/simba-echarts/simba-echarts">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="simba-actuator-1.0.0-RELEASE.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/simba-actuator/simba-actuator">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="simba-web"/>
         <property name="java-output-path" value="/simba-web/target/classes"/>
     </wb-module>

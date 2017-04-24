@@ -22,7 +22,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<simba.version>1.0.0-RELEASE</simba.version>
-		<jetty.version>9.4.0.M1</jetty.version>
+		<jetty.version>9.4.2.v20170220</jetty.version>
 	</properties>
 
 	<dependencyManagement>
@@ -184,6 +184,11 @@
 			<dependency>
 				<groupId>com.simba</groupId>
 				<artifactId>simba-wechatPay</artifactId>
+				<version>${simba.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.simba</groupId>
+				<artifactId>simba-actuator</artifactId>
 				<version>${simba.version}</version>
 			</dependency>
 			<dependency>

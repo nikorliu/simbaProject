@@ -11,7 +11,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jetty.version>9.4.0.M1</jetty.version>
+		<jetty.version>9.4.2.v20170220</jetty.version>
 		<spring.version>4.3.7.RELEASE</spring.version>
 		<spring-session.version>1.2.2.RELEASE</spring-session.version>
 		<cglib-nodep.version>2.2</cglib-nodep.version>

@@ -31,7 +31,8 @@ http://localhost:9000/simba/
 将包名caozj替换成框架名simba	
 将项目拆分，一个maven父项目与多个maven project jar，提交到私有maven仓库,将业务项目与框架分离，便于以后的框架更新，业务项目为空项目，留给开发者编写代码					
 封装mongodb			
-根据环境变量ENV，加载不同的配置文件(默认configs.properties,qa:configs_qa.properties,prod:configs_prod.properties) 				
+根据环境变量ENV，加载不同的配置文件(默认configs.properties,qa:configs_qa.properties,prod:configs_prod.properties)			
+非Spring Boot项目中增加Spring boot actuator项目用于性能监控				
 1.2.10							
 拆分框架 			
 封装阿里云OSS			
